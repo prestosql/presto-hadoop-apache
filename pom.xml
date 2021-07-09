@@ -42,7 +42,7 @@
         <project.build.targetJdk>1.8</project.build.targetJdk>
         <shadeBase>io.trino.hadoop.\$internal</shadeBase>
         <dep.slf4j.version>1.7.25</dep.slf4j.version>
-        <dep.hadoop.version>3.2.0</dep.hadoop.version>
+        <dep.hadoop.version>3.2.2</dep.hadoop.version>
     </properties>
 
     <dependencies>
@@ -520,12 +520,36 @@
                                     <shadedPattern>${shadeBase}.com.google.re2j</shadedPattern>
                                 </relocation>
                                 <relocation>
+                                    <pattern>com.google.errorprone</pattern>
+                                    <shadedPattern>${shadeBase}.com.google.errorprone</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.google.j2objc</pattern>
+                                    <shadedPattern>${shadeBase}.com.google.j2objc</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.google.thirdparty</pattern>
+                                    <shadedPattern>${shadeBase}.com.google.thirdparty</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.checkerframework</pattern>
+                                    <shadedPattern>${shadeBase}.org.checkerframework</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.codehaus</pattern>
+                                    <shadedPattern>${shadeBase}.org.codehaus</shadedPattern>
+                                </relocation>
+                                <relocation>
                                     <pattern>com.fasterxml.jackson</pattern>
                                     <shadedPattern>${shadeBase}.com.fasterxml.jackson</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>org.codehaus.jackson</pattern>
                                     <shadedPattern>${shadeBase}.org.codehaus.jackson</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.codehaus.mojo</pattern>
+                                    <shadedPattern>${shadeBase}.org.codehaus.mojo</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.ctc.wstx</pattern>
